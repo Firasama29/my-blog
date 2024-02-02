@@ -1,2 +1,2 @@
-# my-blog
-github repository containing my blogs
+# My Blog
+This is github repository containing my blogs
