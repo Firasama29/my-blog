@@ -51,11 +51,11 @@
     System.out.println(str.length());
    </pre>
 
- In the above code, variable `str` is assigned a value of `null`. Then the `.length()` is called to get the length of the String variable, but since it's assigned to `null`, a `java.lang.NullPointerException` will be thrown.
-
-   <pre>
-   Exception in thread "main" java.lang.NullPointerException
-   </pre>
+   In the above code, variable `str` is assigned a value of `null`. Then the `.length()` is called to get the length of the String variable, but since it's assigned to `null`, a `java.lang.NullPointerException` will be thrown.
+  
+     <pre>
+     Exception in thread "main" java.lang.NullPointerException
+     </pre>
 
  - There are many common scenarios where we may encounter this error. According to oracle documentation, here is a list of cases:
    - Calling the instance method of a `null` object.
@@ -94,40 +94,40 @@
       }
       </pre>
 
- - Taking the length of `null` as if it were an array.
+   - Taking the length of `null` as if it were an array.
 
-   <pre>
-   int[] arr = null;
-   System.out.println(arr.length()); // throws NPE
-   </pre>
+     <pre>
+     int[] arr = null;
+     System.out.println(arr.length()); // throws NPE
+     </pre>
 
- - Accessing or modifying the slots of `null` as if it were an array.
-   <pre>
-   String[] stringArr = null;
-   stringArr[0] = "example"; // throws NPE
-   </pre>
+   - Accessing or modifying the slots of `null` as if it were an array.
+     <pre>
+     String[] stringArr = null;
+     stringArr[0] = "example"; // throws NPE
+     </pre>
 
- - Throwing null as if it were a **Throwable** value.
-   <pre>
-   class MyClass {
-      private String name;
-  
-      public String getName() {
-          throw null;     
-      }                                                
-   }
-              
-   public class Example {
-      public static void main(String[] args) {
-          MyClass myClass = new MyClass();
-          System.out.println(myClass.getName()); // throws NPE
-      }
-   }
-   </pre>
+   - Throwing null as if it were a **Throwable** value.
+     <pre>
+     class MyClass {
+        private String name;
+    
+        public String getName() {
+            throw null;     
+        }                                                
+     }
+                
+     public class Example {
+        public static void main(String[] args) {
+            MyClass myClass = new MyClass();
+            System.out.println(myClass.getName()); // throws NPE
+        }
+     }
+     </pre>
 
  ## Why is it important to avoid `NullPointerException`
 
-   Null pointer exceptions will occur throughout the application's life unless we make sure to take the necessary precautions to prevent them beforehand as much as possible. This is an important step in the development of an application, but why? Well, because `NullPointerException` can cause some pretty annoying issues.
+    Null pointer exceptions will occur throughout the application's life unless we make sure to take the necessary precautions to prevent them beforehand as much as possible. This is an important step in the development of an application, but why? Well, because `NullPointerException` can cause some pretty annoying issues.
 
  - **It can cause the application to crash or behave unexpectedly** because NullPointerException is an unchecked runtime exception. In other words, it only occurs during runtime and causes the application to terminate abruptly. And that's not something you want in your application.
 
@@ -144,187 +144,186 @@
    - **Using simple `null` checks:**
     One of the most basic techniques to prevent `NPE` is by adding a null check to ensure an object is null-safe before accessing it or using any of its methods. We can accomplish this in different ways:
      - with **if-else** statement:
-        When comparing two objects, it's always recommended to have the non-null object on the lefthand side of the .equals() method. Otherwise, the code will produce `NullPointerException`. This is because the .equals() method is a member method of an object, so if you try to call a method of an object that is assigned as null then you 
+       When comparing two objects, it's always recommended to have the non-null object on the lefthand side of the .equals() method. Otherwise, the code will produce `NullPointerException`. This is because the .equals() method is a member method of an object, so if you try to call a method of an object that is assigned as null then you 
 already know the outcome of doing so. Look at the code below:
 
-      <pre>
-      String str1 = null;
-      String str2 = "Not Null";
-      // this will produce NullPointerException
-      if(str1.equals(str2)) {
-          // do something
-      }
-      // this will safely pass   
-      if(str2.equals(str1)) {
-          // do something
-      }
-      </pre>
+         <pre>
+         String str1 = null;
+         String str2 = "Not Null";
+         // this will produce NullPointerException
+         if(str1.equals(str2)) {
+             // do something
+         }
+         // this will safely pass   
+         if(str2.equals(str1)) {
+             // do something
+         }
+         </pre>
         
      Let's see another example of null check on an array
         
-      <pre>
-      String[] strArr = null;
-      if(strArr != null) {
-          // do something
-      } else {
-          // do something        // throws NPE
-      }
-      </pre>
-
+         <pre>
+         String[] strArr = null;
+         if(strArr != null) {
+             // do something
+         } else {
+             // do something        // throws NPE
+         }
+         </pre>
+   
      - with **ternary operator**:
-      <pre>
-      String str = null;
-      String result = str != null ? str : "Hello World!";
-      System.out.println(result);
-      </pre>
+       <pre>
+       String str = null;
+       String result = str != null ? str : "Hello World!";
+       System.out.println(result);
+       </pre>
    
-      Using this special syntax, if str is not null then return it, otherwise, print "Hello World!". The output of the above code will give us "Hello World!".
+       Using this special syntax, if str is not null then return it, otherwise, print "Hello World!". The output of the above code will give us "Hello World!".
  
- - **java.util.Objects:**
-    Objects class is a `java.util` class that provides several static utility methods to work with objects. We can use a variety of those methods to handle `NPE` . Let's take a look:
+   - **java.util.Objects:**
+     Objects class is a `java.util` class that provides several static utility methods to work with objects. We can use a variety of those methods to handle `NPE` . Let's take a look:
    
-    - `isNull(Object obj)`: returns true if the object is null, otherwise returns false.
+      - `isNull(Object obj)`: returns true if the object is null, otherwise returns false.
+  
+        <pre>
+        Objects.isNull(null);    // true
+        </pre>
 
-      <pre>
-      Objects.isNull(null);    // true
-      </pre>
+      - `nonNull(Object obj)`: returns true if the object is non-null, otherwise returns false.
+        <pre>
+        Objects.nonNull(null);   // false
+        </pre>
 
-    - `nonNull(Object obj)`: returns true if the object is non-null, otherwise returns false.
-      <pre>
-      Objects.nonNull(null);   // false
-      </pre>
+      - `requireNonNullElse(Object obj, Object defaultObj)`: introduced in Java 9. It returns the first argument if it is non-null, otherwise, it returns the second argument.       Keep in mind that if both arguments are null, a `NullPointerExceptionwill` be thrown.
 
-    - `requireNonNullElse(Object obj, Object defaultObj)`: introduced in Java 9. It returns the first argument if it is non-null, otherwise, it returns the second argument.       Keep in mind that if both arguments are null, a `NullPointerExceptionwill` be thrown.
+        <pre>
+        String value1 = null;
+        String defaultValue = "default value";
+        // returns defaultObj
+        Objects.requireNonNullElse(value1, defaultValue);
+        // if both arguments are null
+        Objects.requireNonNullElse(null, null);    // NPE 
+        </pre>
 
-      <pre>
-      String value1 = null;
-      String defaultValue = "default value";
-      // returns defaultObj
-      Objects.requireNonNullElse(value1, defaultValue);
-      // if both arguments are null
-      Objects.requireNonNullElse(null, null);    // NPE 
-      </pre>
+      - `requireNonNullElseGet(Object obj, Supplier<? extends T> supplier)`: takes an object and supplier function as arguments. It returns the first argument if it's non-null, otherwise returns the value of Supplier.get() if it is non-null. If both the object and the supplier or value of Supplier.get() are null, we will be greeted by the familiar `NullPointerException`.
 
-    - `requireNonNullElseGet(Object obj, Supplier<? extends T> supplier)`: takes an object and supplier function as arguments. It returns the first argument if it's non-null, otherwise returns the value of Supplier.get() if it is non-null. If both the object and the supplier or value of Supplier.get() are null, we will be greeted by the familiar `NullPointerException`.
+         <pre>
+         String value1 = null;
+         String defaultValue = "default value";
+         // returns defaultValue
+         Objects.requireNonNullElseGet(value1, () -> defaultValue);
+         // if both arguments are null
+         Objects.requireNonNullElseGet(null, () -> null);    // NPE
+         </pre>
 
-      <pre>
-      String value1 = null;
-      String defaultValue = "default value";
-      // returns defaultValue
-      Objects.requireNonNullElseGet(value1, () -> defaultValue);
-      // if both arguments are null
-      Objects.requireNonNullElseGet(null, () -> null);    // NPE
-      </pre>
+   - **Optional class:**
+     - `Optional` is a container object and one of the many features introduced in Java 8 to safely handle `NPE` without the need to resort to null checks. To use it, we start by first wrapping a potentially nullable value in Optional object, then use of one its methods to check whether the value is present and retrieve it if it is.
 
- - **Optional class:**
-    - `Optional` is a container object and one of the many features introduced in Java 8 to safely handle `NPE` without the need to resort to null checks. To use it, we start by first wrapping a potentially nullable value in Optional object, then use of one its methods to check whether the value is present and retrieve it if it is.
+       <pre>
+       Optional<String> value = Optional.ofNullable("foo");
+       if(value.isPresent()) {
+           System.out.println(value.get());  // returns foo
+       }
+       </pre>
 
-      <pre>
-      Optional<String> value = Optional.ofNullable("foo");
-      if(value.isPresent()) {
-          System.out.println(value.get());  // returns foo
-      }
-      </pre>
-
-    - As you can see, we wrapped an `Optional` around a String value of foo and invoked `ofNullable()` static method that returns an Optional object containing that value if it's present or else just returns an empty `Optional`. Let's see more examples of Optional methods:
+     - As you can see, we wrapped an `Optional` around a String value of foo and invoked `ofNullable()` static method that returns an Optional object containing that value if it's present or else just returns an empty `Optional`. Let's see more examples of Optional methods:
         
-    - `ofNullable()`: returns an Optional containing the value if it is present, or an empty Optional if it is null.
-      <pre>Optional<String> myString = Optional.ofNullable(null);</pre>
-        
-    - `empty()`: returns an empty Optional object in case a value is null.
-      <pre>
-      Optional<String> value = myString.isPresent() ? myString : Optional.empty();    
-      System.out.println(value); // returns Optional.empty
-      </pre>
+       - `ofNullable()`: returns an Optional containing the value if it is present, or an empty Optional if it is null.
+         <pre>Optional<String> myString = Optional.ofNullable(null);</pre>
+           
+       - `empty()`: returns an empty Optional object in case a value is null.
+         <pre>
+         Optional<String> value = myString.isPresent() ? myString : Optional.empty();    
+         System.out.println(value); // returns Optional.empty
+         </pre>
 
-    - `orElse(Object other)`: works similar to `ofNullable()`, but returns a default specified value if the value is not present.
-      <pre>
-      String defaultValue = myString.orElse("default");
-      System.out.println(defaultValue);
-      </pre>
+       - `orElse(Object other)`: works similar to `ofNullable()`, but returns a default specified value if the value is not present.
+         <pre>
+         String defaultValue = myString.orElse("default");
+         System.out.println(defaultValue);
+         </pre>
 
-     - `orElseGet(Supplier<? extends T> supplier)`: works slightly different from `orElse()`. If the Optional is empty, it returns a value returned by the specified supplier function.
-       <pre>
-        // method to be passed by the supplier function
-        public static String getMessage() {
-            return "Hello World!";
-        }
-        String defVal = myString.orElseGet(() -> getMessage());
-        System.out.println(defVal);
-       </pre>
+       - `orElseGet(Supplier<? extends T> supplier)`: works slightly different from `orElse()`. If the Optional is empty, it returns a value returned by the specified supplier function.
+         <pre>
+          // method to be passed by the supplier function
+          public static String getMessage() {
+              return "Hello World!";
+          }
+          String defVal = myString.orElseGet(() -> getMessage());
+          System.out.println(defVal);
+         </pre>
 
-       There is another difference between orElse()and orElseGet():
-       orElse() always evaluates the default value regardless of whether the Optional is empty or not.
-       orElseGet() only executes the supplier function if the Optional is empty.
-       The difference can be more significant in cases where the default value involves expensive computations, making orElseGet() more preferable since it avoids unnecessary operations if the Optional is present.
+         There is another difference between orElse()and orElseGet():
+         orElse() always evaluates the default value regardless of whether the Optional is empty or not.
+         orElseGet() only executes the supplier function if the Optional is empty. The difference can be more significant in cases where the default value involves expensive computations, making orElseGet() more preferable since it avoids unnecessary operations if the Optional is present.
 
-     - `orElseThrow(Supplier<? extends X> exceptionSupplier)`: if the Optional is empty, this method throws an exception returned by the specified Supplier function.
-       <pre>
-       String value = myString.orElseThrow(() -> new RuntimeException("the value is not present"));
-       System.out.println(value);
-       </pre>
+      - `orElseThrow(Supplier<? extends X> exceptionSupplier)`: if the Optional is empty, this method throws an exception returned by the specified Supplier function.
+        <pre>
+        String value = myString.orElseThrow(() -> new RuntimeException("the value is not present"));
+        System.out.println(value);
+        </pre>
 
-     - `isPresent()`: returns true if the Optional contains a non-null value, or false otherwise.
-       <pre>System.out.println(myString.isPresent());</pre>
+      - `isPresent()`: returns true if the Optional contains a non-null value, or false otherwise.
+        <pre>System.out.println(myString.isPresent());</pre>
 
-     - `ifPresent(Consumer<? super T> consumer)`: takes a Consumer function as an argument. It uses a lambda expression or method reference to execute a specific action if the value contained within the Optional object is present, otherwise, it does nothing.
-       <pre>
-       // using lambda expression
-       myString.ifPresent(str -> System.out.println(str));
-       // method reference
-       myString.ifPresent(System.out::println);
-       </pre>
+      - `ifPresent(Consumer<? super T> consumer)`: takes a Consumer function as an argument. It uses a lambda expression or method reference to execute a specific action if the value contained within the Optional object is present, otherwise, it does nothing.
+        <pre>
+        // using lambda expression
+        myString.ifPresent(str -> System.out.println(str));
+        // method reference
+        myString.ifPresent(System.out::println);
+        </pre>
 
- - **Apache Commons StringUtils:**
+   - **Apache Commons StringUtils:**
 
-   - Apache Commons Lang is a third-party library that provides utility classes and methods to deal with Java objects. One of these classes is StringUtils, which contains static methods that work with Strings and can be utilized to prevent NPE. Let's look at some of them:
+     - Apache Commons Lang is a third-party library that provides utility classes and methods to deal with Java objects. One of these classes is StringUtils, which contains static methods that work with Strings and can be utilized to prevent NPE. Let's look at some of them:
 
-     - `isEmpty(CharSequence cs)`: returns true if a String is null or empty
-       <pre>
-           StringUtils.isEmpty(null);    //true
-           StringUtils.isEmpty("");      //true
-           StringUtils.isEmpty(" ");     //false
-       </pre>
+      - `isEmpty(CharSequence cs)`: returns true if a String is null or empty
+        <pre>
+            StringUtils.isEmpty(null);    //true
+            StringUtils.isEmpty("");      //true
+            StringUtils.isEmpty(" ");     //false
+        </pre>
 
-     - `isNotEmpty(CharSequence cs)`: returns false if a String is null or empty
+      - `isNotEmpty(CharSequence cs)`: returns false if a String is null or empty
 
-       <pre>
-       StringUtils.isNotEmpty(null);    //false
-       StringUtils.isNotEmpty("");      //false
-       StringUtils.isNotEmpty(" ");     //true
-       </pre>
+        <pre>
+        StringUtils.isNotEmpty(null);    //false
+        StringUtils.isNotEmpty("");      //false
+        StringUtils.isNotEmpty(" ");     //true
+        </pre>
 
-     - `defaultIfEmpty(String str, String defaultStr)`: returns the first argument if it's non-null or not empty. Otherwise, it returns the second argument
+      - `defaultIfEmpty(String str, String defaultStr)`: returns the first argument if it's non-null or not empty. Otherwise, it returns the second argument
 
-       <pre>
-       StringUtils.defaultIfEmpty(null, "foo");    // foo
-       StringUtils.defaultIfEmpty("", "foo");      // foo
-       StringUtils.defaultIfEmpty(" ", "foo");     // whitespace
-       </pre>    
+        <pre>
+        StringUtils.defaultIfEmpty(null, "foo");    // foo
+        StringUtils.defaultIfEmpty("", "foo");      // foo
+        StringUtils.defaultIfEmpty(" ", "foo");     // whitespace
+        </pre>    
 
-     - `isBlank(CharSequence cs)`: returns true if a String is null, empty or contains only whitespace characters
+      - `isBlank(CharSequence cs)`: returns true if a String is null, empty or contains only whitespace characters
 
-       <pre>
-       StringUtils.isBlank(null);    //true
-       StringUtils.isBlank("");      //true
-       StringUtils.isBlank(" ");     //true
-       </pre>
+        <pre>
+        StringUtils.isBlank(null);    //true
+        StringUtils.isBlank("");      //true
+        StringUtils.isBlank(" ");     //true
+        </pre>
 
-     - `isNotBlank(CharSequence cs)`: returns false if a String is null, empty or contains only whitespace characters
+      - `isNotBlank(CharSequence cs)`: returns false if a String is null, empty or contains only whitespace characters
 
-       <pre>
-       StringUtils.isNotBlank(null);    //false
-       StringUtils.isNotBlank("");      //false
-       StringUtils.isNotBlank(" ");     //false
-       </pre>
+         <pre>
+         StringUtils.isNotBlank(null);    //false
+         StringUtils.isNotBlank("");      //false
+         StringUtils.isNotBlank(" ");     //false
+         </pre>
 
-     - `defaultIfBlank(String str, String defaultStr)`: returns the first argument if non-null, not empty or contains whitespace. Otherwise, it returns the second argument. If both arguments are null, it just returns null.
+      - `defaultIfBlank(String str, String defaultStr)`: returns the first argument if non-null, not empty or contains whitespace. Otherwise, it returns the second argument. If both arguments are null, it just returns null.
 
-       <pre>
-       StringUtils.defaultIfBlank(null, "foo");    // foo
-       StringUtils.defaultIfBlank("", "foo");      // foo
-       StringUtils.defaultIfBlank(" ", "foo");     // foo
-       </pre>
+        <pre>
+        StringUtils.defaultIfBlank(null, "foo");    // foo
+        StringUtils.defaultIfBlank("", "foo");      // foo
+        StringUtils.defaultIfBlank(" ", "foo");     // foo
+        </pre>
 
 
 In summary, NullPointerException occurs due to the existence of null concept in Java. It is important to avoid this exception to maintain a better user experience. This is made easier by a combination of Java features well as third-party libraries and the choice of which to use depends on the requirements of an application.
