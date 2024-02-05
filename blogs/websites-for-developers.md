@@ -3,15 +3,15 @@
 I have compiled a list of interesting online tools and websites for developers, from simplifying `JSON` manipulation to converting between different data types. Each tool serves a specific purpose to enhance the development workflow. Let's discuss them below:
 
 ## Table of Contents
-[JSON](JSON)
-[YAML](YAML)
-[SQL](SQL)
-[HTML & CSS](HTML&CSS)
-[cURL](cURL)
-[General](General)
-[Artificial Intelligence](Artificial-Intelligence)
-[Spring Boot](Spring-Boot)
-[Maven](Maven)
+- [JSON](JSON)
+- [YAML](YAML)
+- [SQL](SQL)
+- [HTML & CSS](HTML&CSS)
+- [cURL](cURL)
+- [General](General)
+- [Artificial Intelligence](Artificial-Intelligence)
+- [Spring Boot](Spring-Boot)
+- [Maven](Maven)
 
 ## JSON
 1. #### [JSON placeholder](https://jsonplaceholder.typicode.com/):
@@ -39,7 +39,7 @@ I have compiled a list of interesting online tools and websites for developers, 
    - It works with common data types including `JSON`, `YAML`, `XML`, `TOML` and `CSV`.
   
 ## YAML
-#### [YAML Lint](https://www.yamllint.com/) & #### [YAML Validator](https://codebeautify.org/yaml-validator)
+#### [YAML Lint](https://www.yamllint.com/) & [YAML Validator](https://codebeautify.org/yaml-validator)
    Both online tools can be used to validate YAML syntax.
 
 ## SQL
