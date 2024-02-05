@@ -10,9 +10,9 @@ Let's say you encounter an issue at work. For instance, a tester reports a bug. 
 1. #### Ask the right questions
    The key to understanding the issue depends on many factors, among them is knowing what to ask. Half the solution lies in asking the right question because it can guide you to the path of the solution and connect you with the right people and the right tools. Each question contributes to a part of the answer and when you piece all these parts together, you may find yourself with the solution.
 
-**Now the question is, how do you determine the right questions to ask?**
+   **Now the question is, how do you determine the right questions to ask?**
 
-Well, the first step is to seek a clear description of the problem. Once you do that, you would need to identify the potential root causes and effects. Make sure you have a solid grasp of the fundamentals of the programming language and relevant domain to effectively tackle the issue.
+   Well, the first step is to seek a clear description of the problem. Once you do that, you would need to identify the potential root causes and effects. Make sure you have a solid grasp of the fundamentals of the programming language and relevant domain to effectively tackle the issue.
 
 2. #### Ask the right people
    Knowing who to ask is just as important as the questions themselves because it can save you a lot of time and effort. Identify the key players concerned with the problem. Reach out to the client or business team to clarify the desired outcome, or connect with a peer from the development team to understand the current system behavior. Ask them the questions you've prepared then summarize and discuss the findings with them to ensure you're all on the same page.
@@ -53,6 +53,7 @@ By iterating through the above steps every time you encounter a bug or undesired
 
 >> - Your ability to navigate this landscape with the appropriate mindset will not only make you stand out as an effective developer, but also contribute to your long-term success.
 >>
+
 
 Thank you for reading.
 
