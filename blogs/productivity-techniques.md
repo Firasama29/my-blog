@@ -21,7 +21,7 @@ My approach comprises of the following components:
 - [To-do list](#To-do-list)
 - [Environment redesign](#environment)
 - [Pomodoro technique](#pomodoro)
-- [habit tracker](#habit-tracker)
+- [Habit tracker](#habit-tracker)
 
 Let’s discuss each one in detail:
 
@@ -46,7 +46,7 @@ Another helpful tip is to make them easy and convenient to do. If you assign a d
 > We obviously might not have the same preferences. You may lean towards writing on a notebook rather than a digital app or prefer other options. That's completely fine as long as they do the trick.
 
 
-## Environment
+## Environment redesign
 The environment you work in is crucial in helping you focus on work. if you have the flexibility to choose where to work, you should set up a quiet, distraction-free environment.
 
 Moving to a different place is recommended rather than redesigning your current environment because this gives you the sense of starting over the task with a clear and focused mind.
@@ -58,7 +58,7 @@ If you don’t have the luxury to move somewhere else then allocate a separate s
 - I’m working from home, so I do my primary work in my room or I set up a cozy chair and table in the balcony.
 - I chose the park at the condo where I live as my reading spot. It’s quiet and helps put my mind both at ease and in focus.
 
-## Pomodoro
+## Pomodoro technique
 You can get distracted by so many things:
 
 - procrastinating
