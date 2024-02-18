@@ -6,15 +6,15 @@ In this article, I plan to share a simple approach I took to organize my tasks a
 
 > Something to keep in mind
 
-Before we begin, you need to keep in mind that getting things done primarily requires discipline more than anything else. Motivation can get you excited to make the first step, but discipline is what gives you a steady push along the path to success. Yet, discipline is not the only factor that plays a key role here. After all, people do not have the same level of discipline and self-control. There are plenty of effective strategies and techniques discussed in the book Atomic Habits which can be boiled down to the following:
+> Before we begin, you need to keep in mind that getting things done primarily requires discipline more than anything else. Motivation can get you excited to make the first > step, but discipline is what gives you a steady push along the path to success. Yet, discipline is not the only factor that plays a key role here. After all, people do not > have the same level of discipline and self-control. There are plenty of effective strategies and techniques discussed in the book Atomic Habits which can be boiled down to > the following:
 
-1. utilize visual cues in your environment that grab your attention. Make them obvious.
+> 1. utilize visual cues in your environment that grab your attention. Make them obvious.
 
-2. make the tasks attractive. Pair a task you need to do with a task you enjoy doing.
+> 2. make the tasks attractive. Pair a task you need to do with a task you enjoy doing.
 
-3. make the tasks easier. Design your environment to make tasks easier to do.
+> 3. make the tasks easier. Design your environment to make tasks easier to do.
 
-4. make the tasks satisfying. Reward yourself after each task.
+> 4. make the tasks satisfying. Reward yourself after each task.
 
 My approach comprises of the following components:
 
@@ -32,7 +32,7 @@ The chaotic way of starting the day is the root of the problem. The solution is 
 
 > Tip
 
-To prepare a list that enables you to actually get down to work, it is crucial to make the tasks as specific as possible. Broad or vague description of a task means it’s less likely you’ll actually start working on it. For example, instead of saying “read Atomic Habits book” or “have a morning walk”, you should go with something more detailed like “read 10 pages of Atomic Habits book” or “walk 5000 steps or for half an hour”.
+> To prepare a list that enables you to actually get down to work, it is crucial to make the tasks as specific as possible. Broad or vague description of a task means it’s less likely you’ll actually start working on it. For example, instead of saying “read Atomic Habits book” or “have a morning walk”, you should go with something more detailed like “read 10 pages of Atomic Habits book” or “walk 5000 steps or for half an hour”.
 Another helpful tip is to make them easy and convenient to do. If you assign a difficult task when it can rather be simplified, you’re more likely to put it off. If walking 5000 steps is too much, why not go with an easier target? Reading 10 pages sounds too hard? 5 pages or even a 10-minute reading would do. What about workout? You could workout twice a week if daily workouts are not convenient for you.
 
 **What do I use?** Every night before sleep, I write down a simple list of tasks for the next day. I primarily use an app called ‘ticktick’, in addition to a notebook and a whiteboard. Yes, I even use a whiteboard. I list down the same tasks on each medium. The reason I use all three is to reduce any possibility of the tasks going unnoticed.
