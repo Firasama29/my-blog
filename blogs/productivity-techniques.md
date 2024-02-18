@@ -18,9 +18,9 @@ Before we begin, you need to keep in mind that getting things done primarily req
 
 My approach comprises of the following components:
 
-- [To-do list](#To-do-list)
-- [Environment redesign](#environment)
-- [Pomodoro technique](#pomodoro)
+- [To-do lists](#To-do-lists)
+- [Environment redesign](#environment-redesign)
+- [Pomodoro technique](#pomodoro-technique)
 - [Habit tracker](#habit-tracker)
 
 Let’s discuss each one in detail:
