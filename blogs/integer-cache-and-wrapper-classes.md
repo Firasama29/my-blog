@@ -24,11 +24,12 @@ System.out.println(a.equals(b));       // true
 In the code above, we compared between the two objects using both the ‘==’ operator and equals() method. The output in both cases is true.
 
 However, things take a different turn when we use a different value:
+
 ```
 Integer a = Integer.valueOf(350);
 Integer b = 350;
 
-```System.out.println((a == b));          // false
+System.out.println((a == b));          // false
 System.out.println(a.equals(b));       // true
 ```
 
