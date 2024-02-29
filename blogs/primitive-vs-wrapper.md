@@ -22,8 +22,8 @@ Integer obj = Integer.valueOf(20);
 In the above example, the variable a directly holds the value **10** , while **obj** of type **Integer** holds the address of the value **20**.
 
 ### Default values:
-Primitive types are assigned with default values. For example, the default value for **int** is 0, **boolean** is false, **float** and **double** is 0.0.
-Wrappers are null by default since they are objects, which may cause <pre>NullPointerException</pre> if not handled with care.
+Primitive types are assigned with default values. For example, the default value for **int** is **0**, **boolean** is **false**, **float** and **double** is **0.0**.
+Wrappers are null by default since they are objects, which may cause **NullPointerException** if not handled with care.
 
 ### Efficiency:
 Because primitive data types hold the actual data, they are more efficient in terms of memory usage. On the other hand, using wrappers requires additional memory overhead since they are objects and they require auto-boxing or unboxing behind the scene. Let’s look at the example below:
@@ -43,9 +43,9 @@ Wrapper classes offer additional functionalities and utility methods to work wit
 There are various cases where we can switch between primitives and their counterparts thanks to autoboxing and unboxing:
 
 In method arguments:
-```
+```java
 public void printNumber(Integer a) { 
- // your code here 
+   // your code here 
 }
 
 // when invoking the method
@@ -54,7 +54,7 @@ printNumber(num);    // valid statement
 ```
 
 Let’s see another example:
-```
+```java
 List<Double> doubleList = new ArrayList<>(); 
 
 doubleList.add(21.01); 
@@ -62,10 +62,11 @@ doubleList.add(2.12);
 
 // doubleList = [21.01, 2.12]
 ```
+
 With return types:
-```
+```java
 public Integer printNumber(Integer a) {
- return a;
+   return a;
 }
 
 // when invoking the method
@@ -73,7 +74,7 @@ int num = printNumber();    // valid statement
 ```
 
 When performing operations:
-```
+```java
 int a = 12;
 Integer b = Integer.valueOf(6);
 
@@ -82,7 +83,7 @@ int c = a * b;             // 72
 Integer d = a + (c * b);   // 444
 ```
 
-Remember to always assign a value to the wrapper class object before using it to avoid causing <pre>NullPointerException</pre>.
+Remember to always assign a value to the wrapper class object before using it to avoid causing **NullPointerException**.
 
 So in short, we can conclude that using primitive data types requires less memory consumption, making them much faster and more efficient compared to their Wrapper counterparts. Therefore primitives should be used unless Wrapper classes are applicable in an object-related context such as when dealing with collections.
 
