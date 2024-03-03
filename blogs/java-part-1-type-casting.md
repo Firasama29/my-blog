@@ -10,23 +10,23 @@ I’ve compiled a list of questions and answers about fundamental topics in Java
 ## What are the conditions for type-casting?
 To convert between data types:
 
-- the data types must be compatible. We can convert an <pre>int</pre> to a <pre>float</pre> or vice versa, but we can’t convert between an <pre>int</pre> and a <pre>String</pre>. A compile error will be thrown in this case.
+- the data types must be compatible. We can convert an `int` to a `float` or vice versa, but we can’t convert between an `int` and a `String`. A compile error will be thrown in this case.
 - the data type that we convert into must be larger than the original data type. Otherwise, Java will complain. However, this is still possible with a workaround, which we will discuss in the next section.
 
 ## What are the categories of type-casting?
 There are two types of type-casting:
 
-- ***Widening conversion (implicit casting)***: If we cast a smaller data type to a larger one, Java compiler will automatically perform the casting. For example, if we want to convert from <pre>int</pre> to a <pre>double</pre>, we only need to assign the <pre>int</pre> value to a <pre>double</pre> because integers are smaller (32 bits) than doubles (64 bits), so there is no risk of data loss after conversion. Here’s a code snippet to demonstrate this:
+- ***Widening conversion (implicit casting)***: If we cast a smaller data type to a larger one, Java compiler will automatically perform the casting. For example, if we want to convert from `int` to a `double`, we only need to assign the `int` value to a `double` because integers are smaller (32 bits) than doubles (64 bits), so there is no risk of data loss after conversion. Here’s a code snippet to demonstrate this:
   ```java
     double number = 10;      //output = 10.0, which is a double
   ```
-  We declared a <pre>double</pre> variable and assigned to it an integer value of 10. Since an integer is smaller than a double, the double will easily have more than enough room to store that value.
+  We declared a `double` variable and assigned to it an `int` value of 10. Since an `int` is smaller than a `double`, the double will easily have more than enough room to store that value.
 
-- ***Narrowing conversion (explicit casting)***: If we cast a larger data type to a smaller one, Java compiler will complain and will not perform the conversion. For instance, attempting to cast a <pre>double</pre> to an <pre>int</pre> will trigger a compile error. To solve this, we can explicitly cast the value to the smaller data type using the casting operator ():
+- ***Narrowing conversion (explicit casting)***: If we cast a larger data type to a smaller one, Java compiler will complain and will not perform the conversion. For instance, attempting to cast a `double` to an `int` will trigger a compile error. To solve this, we can explicitly cast the value to the smaller data type using the casting operator ():
   ```java
   int number = (int) 10.50;  //output = 10, which is an integer
   ```
-  Contrary to the previous example, the double value of 10.50 is assigned to an integer. Without an explicit operator, a portion of data would be lost since it's larger than what an integer can hold. So we use the casting operator (int) next to the double value so that it gets converted and stored as an integer.
+  Contrary to the previous example, the double value of 10.50 is assigned to an integer. Without an explicit operator, a portion of data would be lost since it's larger than what an integer can hold. So we use the casting operator `(int)` next to the double value so that it gets converted and stored as an integer.
 
 > Type-casting with primitive types vs reference types
 
@@ -53,7 +53,7 @@ public class Car extends Vehicle {
     }
 }
 ```
-As you can see, there are two classes, **Vehicle** and **Car**. The **Car** class extends or inherits **Vehicle**. In this scenario, when we create an object of type **Car**, we can either assign it to a reference of type **Car** class like so:
+As you can see, there are two classes, `Vehicle` and `Car`. The **Car** class extends or inherits `Vehicle`. In this scenario, when we create an object of type `Car`, we can either assign it to a reference of type `Car` class like so:
 ```java
 Car vehicle = new Car();
 ```
@@ -82,7 +82,7 @@ if(vehicle instanceof Vehicle) {
     car.driveCar();
 }
 ```
-We use <pre>instanceof<pre> to check if the vehicle reference is an instance of Vehicle class before explicitly downcasting using the <pre>(Car)</pre> operator. This is a way to prevent <pre>ClassCastException</pre> at runtime.
+We use `instanceof` to check if the vehicle reference is an instance of Vehicle class before explicitly downcasting using the `(Car)` operator. This is a way to prevent `ClassCastException` at runtime.
 
 Downcasting is particularly useful in cases where we have an instance of a superclass but we need to use the fields and methods of a subclass. Since we can only access superclass fields and methods in this scenario, downcasting is an approach to solve this problem.
 
