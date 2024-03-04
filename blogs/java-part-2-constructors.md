@@ -7,6 +7,7 @@ I’ve compiled a list of questions and answers about fundamental topics in Java
 - It’s used to initialize an instance of a class.
 
 ## How is a constructor used to initialize an object of a class?
+
 ![image](https://github.com/Firasama29/my-blog/assets/67781796/1857a0c8-915a-4a86-a0a5-946ae5774498)
 
 We created an object of `Person` class using the `new` keyword followed by the constructor `Person()`
@@ -17,11 +18,13 @@ We created an object of `Person` class using the `new` keyword followed by the c
 - Does not take any parameters. Hence called ‘no-args’
 - The syntax is ClassName() {}
 - Can be used to create objects and initialize instance variables of a class with their default values:
+
   ![image](https://github.com/Firasama29/my-blog/assets/67781796/c76cf80f-45ca-4e3d-b504-0b4930808b2a)
 
-2. Parameterized Constructor
+2. ***Parameterized Constructor***
 - Must be defined with one or more parameters
 - Used to create objects and initialize instance variables with customized values. Let’s modify the above example to demonstrate how to create and use a parameterized constructor:
+
 - ![image](https://github.com/Firasama29/my-blog/assets/67781796/66d66a7d-d98b-4bf3-8825-5ba3bb347bb0)
 
 ## What are the rules for creating a Java constructor?
@@ -35,14 +38,14 @@ There are some rules such as:
 - Can call a superclass constructor from the subclass using keyword `super()` provided that the call must be the first statement in the constructor.
 
 ## What’s the difference between a constructor and a method?
-**Constructor**:
+***Constructor***:
 
 - Used to initialize objects
 - Must have the same name as the class
 - Does not have a return type
 - A default constructor is provided by Java compiler if not explicitly defined
 
-**Method**:
+***Method***:
 
 - Used to perform a specific operation
 - Can be named anything
@@ -51,6 +54,7 @@ There are some rules such as:
 
 ## What is Constructor chaining?
 This concept refers to the process of invoking a constructor from another constructor within the same class or subclass. It’s performed using the keyword `this` in the same class or `super` from the subclass, while making sure the call is the first statement inside the constructor. This is useful in reducing code duplication by reusing the initialization code that's already defined in one constructor. Let’s look at the code below:
+
 ![image](https://github.com/Firasama29/my-blog/assets/67781796/105d005e-da72-4b8b-8bf7-a3a0a7f1c73c)
 
 As you can see, we demonstrated two ways to perform constructor chaining:
