@@ -48,7 +48,7 @@ I’ve compiled a list of questions and answers about fundamental topics in Java
 - Neither interfaces nor abstract classes can be instantiated. Meaning you cannot create objects of either of them.
 
 ## When to use abstract classes vs interfaces?
-The Oracle Java docs examine a list of situations where you need to either use abstract classes or interfaces:
+The [Oracle Java docs](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html) examine a list of situations where you need to either use abstract classes or interfaces:
 **Use abstract classes when:**
 - you have a group of related classes and you want to share common code among them. This promotes code re-usability and avoids duplication.
 - you want to declare non-static or non-final fields.
