@@ -60,7 +60,7 @@ There are two ways to achieve this:
   Double bObj = 30.6;
   double b = bObj;
   ```
-**using intValue() method**: This is a method provided by the wrapper class:
+- **using intValue() method**: This is a method provided by the wrapper class:
   ```java
   Integer aObj = 5;
   int a = aObj.intValue();
