@@ -85,8 +85,7 @@ This is due to the difference between static vs instance fields and methods. As 
 
 **Drawbacks:**
 
-- **Dependence on objects:** instance methods can only be created and invoked by creating an instance of a class.
-- **Access restriction:** They can't be accessed from static methods since they need to be called using an object of a class.
+The dependency of instance methods on objects can be a drawback in situations where operations do not need an object to be instantiated.
 
 ### Static methods:
 **Advantages:**
