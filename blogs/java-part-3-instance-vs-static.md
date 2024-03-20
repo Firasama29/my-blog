@@ -79,17 +79,20 @@ This is due to the difference between static vs instance fields and methods. As 
 ### Instance methods:
 **Advantages:**
 
-- Access to instance variables: instance methods have direct access to instance data, allowing them to operate and modify the state of the object.
-- Encapsulation: instance methods play a role in Object-Oriented Programming by bundling the data and methods that operate on that data into a single unit.
-- Polymorphism: using the concept of instance methods, subclasses can override methods of their superclasses.
+- **Access to instance variables:** instance methods have direct access to instance data, allowing them to operate and modify the state of the object.
+- **Encapsulation:** instance methods play a role in Object-Oriented Programming by bundling the data and methods that operate on that data into a single unit.
+- **Polymorphism:** using the concept of instance methods, subclasses can override methods of their superclasses.
 
 **Drawbacks:**
+
+- **Dependence on objects:** instance methods can only be created and invoked by creating an instance of a class.
+- **Access restriction:** They can't be accessed from static methods since they need to be called using an object of a class.
 
 ### Static methods:
 **Advantages:**
 
-- No dependency on objects: static methods do not require an object to be instantiated since they belong to the class itself.
-- Global accessibility: they can be invoked globally within the scope of the class.
+- **No dependency on objects:** static methods do not require an object to be instantiated since they belong to the class itself.
+- **Global accessibility:** they can be invoked globally within the scope of the class.
 
 **Drawbacks:**
 
