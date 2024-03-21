@@ -12,11 +12,13 @@ In this article, we’re going to demonstrate how to interact with Claude by int
 ### Step 1. Create an account
 - Sign up at Anthropic’s console web Console and verify your email.
 - Once you login, you’ll be presented with the ‘Console’ which is your entry point to interact with Claude. On this page you will be presented with a list of options.
+
   ![image](https://github.com/Firasama29/my-blog/assets/67781796/b6a3f345-2497-4a3b-81e0-c1344633664d)
 
 ## Step 2. Generate an API key
 - From the Console, navigate to ‘Get API Keys’: API keys are essential for authenticating your API requests and you’ll need one in order to start developing with Claude. On the API keys page, you can generate, disable or delete your API keys.
- ![image](https://github.com/Firasama29/my-blog/assets/67781796/3b0bd095-11ec-4499-aa02-b817cebd09e2)
+
+![image](https://github.com/Firasama29/my-blog/assets/67781796/3b0bd095-11ec-4499-aa02-b817cebd09e2)
 
 - Create your API key and give it a name (e.g. ANTHROPIC_API_KEY). Copy and store it in a secured location.
 
@@ -87,9 +89,9 @@ Let’s discuss the above code:
 ## Step 7. Send a request
 To send a request to Claude API, execute the python script by running command `python claude_api.py` or `python3 claude_api.py`.
 
->> Access to Claude API is limited. Once you sign up, you get free trial credits to test the API.
+> Access to Claude API is limited. Once you sign up, you get free trial credits to test the API.
 
-> As of today, the pricing is credit-based, where credits are consumed with each API request based on factors such as the model used, the length of the response, etc. So once your free credits are exhausted, you will be presented with the following error: **'Your credit balance is too low to access the Claude API. Please go to Plans & Billing to upgrade or purchase credits.'**
+>> As of today, the pricing is credit-based, where credits are consumed with each API request based on factors such as the model used, the length of the response, etc. So once your free credits are exhausted, you will be presented with the following error: **'Your credit balance is too low to access the Claude API. Please go to Plans & Billing to upgrade or purchase credits.'**
 
 
 To summarize, we set up an account, generated the API key and set it as an environment variable, then we wrote a python script to call Claude API and pass the required parameters to define the model and other settings. Executing the python script will send an API request and return a response.
