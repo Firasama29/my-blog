@@ -33,6 +33,6 @@ This is github repository containing my blogs
 
 15 - [Basic Java Questions & Answers (Part 5) — Wrapper Classes](blogs/java-part-5-wrapper-classes.md)
 
-16 - []
+16 - [How to Call OpenAI API from postman](call-openai-api-from-postman.md)
 
-17 - []
+17 - [How to Get Started with Claude API](getting-started-with-claude-api.md)
