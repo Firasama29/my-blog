@@ -36,3 +36,4 @@ This is github repository containing my blogs
 16 - [How to Call OpenAI API from postman](blogs/call-openai-api-from-postman.md)
 
 17 - [How to Get Started with Claude API](blogs/getting-started-with-claude-api.md)
+
