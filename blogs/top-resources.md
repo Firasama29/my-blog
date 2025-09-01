@@ -1,5 +1,5 @@
 # Top Resources I recommend for Junior Developers
-
+ 
 Over the past few years we have witnessed a trend of an increasing number of individuals gravitating towards software or web development, whether as a career transition or a fresh start in college. I believe this is due to two factors: the prospect of higher-paying job opportunities and the possibility to self-learn. It is undoubtedly clear that the combination of the above reasons is what fuels the motivation of self-taught programmers, including myself.
 
 In this article I'll share top online resources that helped me in my journey as a self-taught developer, which I believe will be of an immense help to you as well. Let's jump right in.
