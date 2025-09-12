@@ -17,10 +17,13 @@ I have compiled a list of interesting online tools and websites for developers, 
 1. #### [JSON placeholder](https://jsonplaceholder.typicode.com/):
    This website serves as a mock server and provides fake API endpoints to interact with different types of data using common HTTP methods. The data is returned in JSON format.
 
-2. #### [jsonschema2pojo](https://www.jsonschema2pojo.org/):
+2. #### [Mockae](https://mockae.com/):
+   Similar to JSON Placeholder, Mockae also provides fake API endpoints, using Lua for generating dynamic responses.
+
+3. #### [jsonschema2pojo](https://www.jsonschema2pojo.org/):
    This website simplifies the process of converting `JSON`, `JSON schema`, `YAML` and `YAML schema` into Java classes. It also lets you to choose annotation styles (Jackson, Gson, etc.), validation annotations (javax.validation and jakarta.validation), in addition to other options that allow you to customize your Java classes.
 
-3. #### [JSON formatter](https://jsonformatter.org/):
+4. #### [JSON formatter](https://jsonformatter.org/):
    - JSON formatter is an online tool that simplifies working with JSON data. It assists developers in the following:
      - formatting and beautifying JSON structure
      - validating the syntax
@@ -28,13 +31,13 @@ I have compiled a list of interesting online tools and websites for developers, 
      - converting `JSON` text into other formats such as `XML`, `CSV` and `YAML`
    - You can simply input or paste `JSON` content or even upload it from a URL or a file and the website automatically formats and validates it. You additionally have the option to download the content as a text file.
   
-4. #### [JSONLint](https://jsonlint.com/):
+5. #### [JSONLint](https://jsonlint.com/):
    Similar to JSON formatter, JSONLint also validates and formats JSON objects. Simply paste your text and click on validate. You can also compress, prettify and clear the text.
 
-5. #### [JSON diff](https://www.jsondiff.com/):
+6. #### [JSON diff](https://www.jsondiff.com/):
    This is a simple online tool to compare two JSON texts and highlight the differences between them.
 
-6. #### [JSON Crack](https://jsoncrack.com/):
+7. #### [JSON Crack](https://jsoncrack.com/):
    - An interesting online tool to for data presentation. It converts various data types into graphs where you can easily visualize all elements and the relationship between each element.
    - It works with common data types including `JSON`, `YAML`, `XML`, `TOML` and `CSV`.
   
